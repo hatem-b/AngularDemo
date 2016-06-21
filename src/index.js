@@ -1,20 +1,24 @@
 var angular = require('angular');
+//var m = require('materialize');
+var m2 = require('materialize-css');
 
-var techsModule = require('./app/techs/index');
+
+var homeModule = require('./app/home/index');
 require('angular-ui-router');
 var routesConfig = require('./routes');
 
 var main = require('./app/main');
 var header = require('./app/header');
-var title = require('./app/title');
 var footer = require('./app/footer');
 
-require('./index.less');
+require('./styles/index.less');
 
 angular
-  .module('app', [techsModule, 'ui.router'])
+  .module('app', [homeModule, 'ui.router'])
   .config(routesConfig)
   .component('app', main)
-  .component('fountainHeader', header)
-  .component('fountainTitle', title)
-  .component('fountainFooter', footer);
+  .component('myHeader', header)
+  .component('myFooter', footer);
+
+
+

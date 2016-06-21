@@ -29,7 +29,8 @@ module.exports = {
         loaders: [
           'ng-annotate'
         ]
-      }
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' }
     ]
   },
   plugins: [
