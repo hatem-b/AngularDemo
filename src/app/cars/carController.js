@@ -3,8 +3,28 @@ var angular = require('angular');
 var carsModule = require('./index');
 
 var controller = function(carService, $state, $stateParams){
+	var self = this;
+	self.loaded = false;
 
-	this.car = carService.getCar($stateParams.id);	
+	carService.getCar($stateParams.id)
+		.then(function(reponse){
+			self.car = reponse.data;
+			self.loaded = true;
+		});	
+
+	self.delete = function(){
+		console.log('del', self.car.id);
+
+		carService.delete(self.car.id)
+		.then(function(){
+			$state.go("cars.list.cards");
+		});
+	};
+
+
+	self.aa = function(){
+		console.log("aa");
+	};
 };
 
 module.exports = controller;

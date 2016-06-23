@@ -1,7 +1,7 @@
-<div ng-controller="carListController as carListCtrl" class="container">
+<div ng-controller="carListController as carListCtrl" class="container" >
   
   <div class="row">
-    <div class="input-field col s6 offset-s6">
+    <div class="input-field col s12 l6 offset-l6">
       <input placeholder="" id="search" type="text" class="validate" ng-model="search">
       <label for="search">Search</label>
     </div>
@@ -15,6 +15,11 @@
       </ul>
     </div>
   </div>
-  <ui-view></ui-view>
+  <ui-view ></ui-view>
   
+  <div class="fixed-action-btn" style="bottom: 60px; right: 30px;">
+    <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="cars.add">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
 </div>

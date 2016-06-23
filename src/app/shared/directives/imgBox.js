@@ -1,4 +1,4 @@
-// directive to setup the jquery code needed by materialize for tabs
+// directive to setup the jquery code needed by materialize for image box
 
 var angular = require('angular');
 var sharedModule = require('../index');

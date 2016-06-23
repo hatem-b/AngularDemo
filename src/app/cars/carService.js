@@ -2,20 +2,36 @@ var angular = require('angular');
 
 var carsModule = require('./index');
 
-var service = function(){
-	this.cars = {};
 
-	this.getCars = function(){
-		this.cars = require('./cars.json');
-		return this.cars;
+var BASE_URL = "http://localhost:3002/cars/";
+
+var service = function($http){
+	var self = this;
+
+	self.cars = {};
+
+	self.getCars = function(){
+		return $http.get(BASE_URL);
 	};
 
-	this.getCar = function(id){
-		this.cars = require('./cars.json');
-		
-		return this.cars.filter(function(car){
-			return car.id == id;
-		})[0];
+	self.getCar = function(id){
+		return $http.get(BASE_URL + id);
+	};
+
+	self.create = function(car){
+		return $http.post(BASE_URL, {
+			data : car
+		});
+	};
+
+	self.update = function(car){
+		return $http.put(BASE_URL, {
+			data : car
+		});
+	};
+
+	self.delete = function(id){
+		return $http.delete(BASE_URL + id);
 	};
 };
 

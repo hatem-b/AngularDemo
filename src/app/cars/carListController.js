@@ -3,10 +3,16 @@ var angular = require('angular');
 var carsModule = require('./index');
 
 var controller = function(carService, $state){
+	var self = this;
+	self.loaded = false;
 
-	this.cars = carService.getCars();
+	carService.getCars()
+		.then(function(reponse){
+			self.cars = reponse.data;
+			self.loaded = true;
+		});
 
-	this.go = function(subState){
+	self.go = function(subState){
 		$state.go('cars.list' + subState);
 	};
 };

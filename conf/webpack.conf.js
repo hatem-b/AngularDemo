@@ -31,6 +31,7 @@ module.exports = {
         ]
       },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
+      { test: /\.html$/, loader: "html" },
       // { test: /materialize-css\/bin\//, loader: 'imports?jQuery=jquery,$=jquery,hammerjs' },
     ]
   },
