@@ -40,6 +40,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: "app/cars/carForm.html",
       
     })
+    .state('cars.view', {
+      url: "/:id",
+      templateUrl: "app/cars/car.html",
+      
+    })
     .state('cars.edit', {
       url: "/edit/:id",
       templateUrl: "app/cars/carForm.html",

@@ -9,6 +9,14 @@ var service = function(){
 		this.cars = require('./cars.json');
 		return this.cars;
 	};
+
+	this.getCar = function(id){
+		this.cars = require('./cars.json');
+		
+		return this.cars.filter(function(car){
+			return car.id == id;
+		})[0];
+	};
 };
 
 module.exports = service;

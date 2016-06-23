@@ -11,3 +11,5 @@ angular
 require('./carService');
 
 require('./carListController');
+require('./carController');
+require('./carFormController');
