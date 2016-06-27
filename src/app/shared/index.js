@@ -5,7 +5,6 @@ var sharedModule = 'shared';
 module.exports = sharedModule;
 
 angular
-  .module(sharedModule, []);
-
+	.module(sharedModule, []);
 
 require('./directives');

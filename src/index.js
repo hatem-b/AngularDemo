@@ -3,8 +3,7 @@ var angular = require('angular');
 
 window.jQuery = window.$ = require('materialize-css/node_modules/jquery/dist/jquery');
 //window.$.velocity = require('velocity-animate/velocity.js');
-require('materialize-css/dist/js/materialize');	
-
+require('materialize-css/dist/js/materialize');
 
 
 require('angular-ui-router');
@@ -19,18 +18,9 @@ var sharedModule = require('./app/shared/index');
 
 var routesConfig = require('./routes');
 
-var main = require('./app/main');
-var header = require('./app/header');
-var footer = require('./app/footer');
-
-
+var main = require('./app/home/main');
 
 angular
-  .module('app', [homeModule, carsModule, sharedModule, 'ui.router'])
-  .config(routesConfig)
-  .component('app', main)
-  .component('myHeader', header)
-  .component('myFooter', footer);
-
-
-
+    .module('app', [homeModule, carsModule, sharedModule, 'ui.router'])
+    .config(routesConfig)
+    .component('app', main);

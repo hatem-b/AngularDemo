@@ -5,11 +5,12 @@ var carsModule = 'cars';
 module.exports = carsModule;
 
 angular
-  .module(carsModule, []);
+	.module(carsModule, []);
 
-
+//services
 require('./carService');
 
+// controllers
 require('./carListController');
 require('./carController');
 require('./carFormController');

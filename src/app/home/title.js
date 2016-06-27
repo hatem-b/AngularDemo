@@ -1,3 +1,3 @@
 module.exports = {
-  templateUrl: 'app/home/title.html'
+    templateUrl: 'app/home/title.html'
 };

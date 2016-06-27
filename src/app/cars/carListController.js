@@ -2,17 +2,17 @@ var angular = require('angular');
 
 var carsModule = require('./index');
 
-var controller = function(carService, $state){
+var controller = function (carService, $state) {
 	var self = this;
 	self.loaded = false;
 
 	carService.getCars()
-		.then(function(reponse){
+		.then(function (reponse) {
 			self.cars = reponse.data;
 			self.loaded = true;
 		});
 
-	self.go = function(subState){
+	self.go = function (subState) {
 		$state.go('cars.list' + subState);
 	};
 };
@@ -22,5 +22,5 @@ var controller = function(carService, $state){
 module.exports = controller;
 
 angular
-  .module(carsModule)
-  .controller('carListController', controller);
+	.module(carsModule)
+	.controller('carListController', controller);

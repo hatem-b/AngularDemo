@@ -5,32 +5,33 @@ var carsModule = require('./index');
 
 var BASE_URL = "http://localhost:3002/cars/";
 
-var service = function($http){
+var service = function ($http) {
 	var self = this;
 
 	self.cars = {};
 
-	self.getCars = function(){
+	self.getCars = function () {
 		return $http.get(BASE_URL);
 	};
 
-	self.getCar = function(id){
+	self.getCar = function (id) {
+		console.log("called get car", id);
 		return $http.get(BASE_URL + id);
 	};
 
-	self.create = function(car){
+	self.create = function (car) {
 		return $http.post(BASE_URL, {
-			data : car
+			data: car
 		});
 	};
 
-	self.update = function(car){
+	self.update = function (car) {
 		return $http.put(BASE_URL, {
-			data : car
+			data: car
 		});
 	};
 
-	self.delete = function(id){
+	self.delete = function (id) {
 		return $http.delete(BASE_URL + id);
 	};
 };
@@ -38,5 +39,5 @@ var service = function($http){
 module.exports = service;
 
 angular
-  .module(carsModule)
-  .service('carService', service);
+	.module(carsModule)
+	.service('carService', service);
