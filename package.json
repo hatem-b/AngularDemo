@@ -60,7 +60,9 @@
     "serve": "gulp serve",
     "serve:dist": "gulp serve:dist",
     "test": "gulp test",
-    "test:auto": "gulp test:auto"
+    "test:auto": "gulp test:auto",
+    "e2e-test" : "gulp e2e-test",
+    "protractor" : "protractor src/tests/conf.js"
   },
   "eslintConfig": {
     "globals": {
