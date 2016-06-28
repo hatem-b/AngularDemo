@@ -3,7 +3,8 @@ var angular = require('angular');
 var carsModule = require('./index');
 
 
-var BASE_URL = "http://localhost:3002/cars/";
+//var BASE_URL = "http://localhost:3002/cars/";
+var BASE_URL = require("../../server_url.js") + "/cars/";
 
 var service = function ($http) {
 	var self = this;
