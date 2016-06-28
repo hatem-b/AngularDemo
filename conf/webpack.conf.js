@@ -29,7 +29,10 @@ module.exports = {
         loaders: [
           'ng-annotate'
         ]
-      }
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
+      { test: /\.html$/, loader: "html" },
+      // { test: /materialize-css\/bin\//, loader: 'imports?jQuery=jquery,$=jquery,hammerjs' },
     ]
   },
   plugins: [
@@ -38,7 +41,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html'),
       inject: true
-    })
+    }),
+   //   new webpack.ProvidePlugin({
+   //     $: "jquery",
+   //     jQuery: "jquery",
+   //     "Hammer": "hammerjs/hammer",
+   //     "velocity": "velocity-animate"
+   // })
   ],
   postcss: () => [autoprefixer],
   debug: true,

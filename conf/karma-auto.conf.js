@@ -10,7 +10,7 @@ module.exports = function (config) {
       outputDir: 'test-reports'
     },
     browsers: [
-      'PhantomJS'
+      'PhantomJS', //'Firefox', 'Opera'
     ],
     frameworks: [
       'jasmine'
@@ -32,10 +32,10 @@ module.exports = function (config) {
       stripPrefix: `${conf.paths.src}/`
     },
     reporters: ['progress', 'coverage'],
-    coverageReporter: {
-      type: 'html',
-      dir: 'coverage/'
-    },
+    // coverageReporter: {
+    //   type: 'html',
+    //   dir: 'coverage/'
+    // },
     webpack: require('./webpack-test.conf'),
     webpackMiddleware: {
       noInfo: true
@@ -47,7 +47,9 @@ module.exports = function (config) {
       require('karma-phantomjs-launcher'),
       require('karma-phantomjs-shim'),
       require('karma-ng-html2js-preprocessor'),
-      require('karma-webpack')
+      require('karma-webpack'),
+      require('karma-firefox-launcher'),
+      require('karma-opera-launcher')
     ]
   };
 

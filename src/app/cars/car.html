@@ -1,0 +1,29 @@
+<div class="container" ng-controller="carController as carCtrl" >
+	<br/>
+	<div class="col s12 m7" loader wait-for="carCtrl.loaded">
+		<div class="card">
+			<div class="card-image">
+				<img class="materialboxed" ng-src="{{carCtrl.car.img}}"/>
+				<span class="card-title">{{carCtrl.car.model}}</span>
+			</div>
+			<div class="card-content">
+				<p>
+					Manufacturer : {{carCtrl.car.manufacturer}}<br/>
+					Model : {{carCtrl.car.model}}<br/>
+					Price : {{carCtrl.car.price}}<br/>
+					<a class="blue-text" href="{{car.wiki}}" target = "_blank" > {{carCtrl.car.wiki}}</a>
+				</p>
+			</div>
+			<div class="card-action">
+				<a class="waves-effect waves-light btn-flat" ui-sref="cars.edit({id : carCtrl.car.id})">
+					<i class="material-icons right" >mode_edit</i>Edit
+				</a>
+				<a class="waves-effect waves-light btn-flat" ng-click="carCtrl.delete();" href="#">
+					<i class="material-icons right">delete</i>Delete
+				</a>
+				
+			</div>
+		</div>
+	</div>
+
+</div>

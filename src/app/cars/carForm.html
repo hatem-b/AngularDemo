@@ -1,0 +1,36 @@
+<div class="container" ng-controller="carFormController as carFormCtrl" class="row">
+  <br/>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="manufacturer" type="text" class="validate" ng-model="carFormCtrl.car.manufacturer">
+        <label for="manufacturer" class="active">Manufacturer</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="" id="search" type="text" class="validate" ng-model="carFormCtrl.car.model">
+        <label for="search" class="active">Model</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="" id="search" type="text" class="validate" ng-model="carFormCtrl.car.price">
+        <label for="search" class="active">Price</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="" id="search" type="text" class="validate" ng-model="carFormCtrl.car.wiki">
+        <label for="search" class="active">Wiki</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="" id="search" type="text" class="validate" ng-model="carFormCtrl.car.img">
+        <label for="search" class="active">Image</label>
+      </div>
+    </div>
+  </form>
+  <a class="waves-effect waves-light btn s3 col" ng-click="carFormCtrl.save();">Save</a>
+</div>
