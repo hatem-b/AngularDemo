@@ -2,6 +2,7 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.3.1",
+    "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "hammer": "0.0.5",
     "hammerjs": "^2.0.8",
@@ -61,8 +62,8 @@
     "serve:dist": "gulp serve:dist",
     "test": "gulp test",
     "test:auto": "gulp test:auto",
-    "e2e-test" : "gulp e2e-test",
-    "protractor" : "protractor src/tests/conf.js"
+    "e2e-test": "gulp e2e-test",
+    "protractor": "protractor src/tests/conf.js"
   },
   "eslintConfig": {
     "globals": {
