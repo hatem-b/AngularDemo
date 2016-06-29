@@ -16,6 +16,15 @@ module.exports = {
         ]
       },
       {
+        test: /\.(css|less)$/,
+        loaders: [
+          'style',
+          'css',
+          'less',
+          'postcss'
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
@@ -29,15 +38,7 @@ module.exports = {
       },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
       { test: /\.html$/, loader: "html" },
-      {
-        test: /\.(css|less)$/,
-        loaders: [
-          'style',
-          'css',
-          'less',
-          'postcss'
-        ]
-      },
+      ,
     ]
   },
   plugins: [],
