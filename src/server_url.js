@@ -1,1 +1,1 @@
-module.exports = "http://localhost:3002";
+module.exports = "http://node-hatem.azurewebsites.net";
