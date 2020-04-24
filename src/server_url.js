@@ -1,1 +1,1 @@
-module.exports = "http://node-hatem.azurewebsites.net";
+module.exports = "https://node-hatem.azurewebsites.net";
